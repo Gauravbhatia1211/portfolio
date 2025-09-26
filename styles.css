@@ -98,7 +98,10 @@ img { max-width: 100%; display: block; }
 .card-controls span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.25); margin-left: 6px; }
 .profile-avatar { position: relative; display: grid; place-items: center; padding: 18px; }
 .avatar-glow { position: absolute; width: 220px; height: 220px; background: radial-gradient(circle, rgba(0,230,168,.35), transparent 60%); filter: blur(18px); border-radius: 50%; z-index: 0; }
-.avatar-img { position: relative; z-index: 1; width: 160px; height: 160px; border-radius: 50%; border: 2px solid rgba(255,255,255,.15); box-shadow: 0 18px 50px rgba(0,212,255,.15); object-fit: cover; }
+.avatar-container { position: relative; z-index: 1; }
+.avatar-img { width: 160px; height: 160px; border-radius: 50%; border: 2px solid rgba(255,255,255,.15); box-shadow: 0 18px 50px rgba(0,212,255,.15); object-fit: cover; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.avatar-img:hover { transform: scale(1.05); box-shadow: 0 25px 60px rgba(0,230,168,.25); }
+.avatar-img[src*="fallback-avatar.svg"] { opacity: 0.9; }
 .security-badge { position: absolute; right: 16px; bottom: 16px; background: rgba(0,230,168,.12); color: var(--primary); border: 1px solid rgba(0,230,168,.25); padding: 8px 12px; border-radius: 999px; font-weight: 700; letter-spacing: .5px; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; }
 
 /* Sections */

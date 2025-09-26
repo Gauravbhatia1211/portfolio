@@ -193,4 +193,37 @@
       } catch (e) {}
     });
   }
+
+  // Avatar image handling
+  const avatarImg = $('.avatar-img');
+  if (avatarImg) {
+    // Try local profile image first, then GitHub avatar
+    const localImageSources = [
+      './images/profile.jpg',
+      './images/profile.png',
+      './images/profile.jpeg',
+      './images/avatar.jpg',
+      './images/avatar.png'
+    ];
+    
+    let currentSourceIndex = 0;
+    
+    function tryNextSource() {
+      if (currentSourceIndex < localImageSources.length) {
+        const img = new Image();
+        img.onload = () => {
+          avatarImg.src = localImageSources[currentSourceIndex];
+        };
+        img.onerror = () => {
+          currentSourceIndex++;
+          tryNextSource();
+        };
+        img.src = localImageSources[currentSourceIndex];
+      }
+      // If no local images found, keep the GitHub avatar as fallback
+    }
+    
+    // Check for local images on load
+    setTimeout(tryNextSource, 1000);
+  }
 })();
