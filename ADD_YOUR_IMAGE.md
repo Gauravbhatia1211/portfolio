@@ -69,7 +69,7 @@ Your portfolio currently:
 
 After adding your image:
 
-1. **Visit your portfolio:** https://gauravbhatia1211.github.io/cyberpunk-portfolio/
+1. **Visit your portfolio:** https://gauravbhatia1211.github.io/portfolio/
 2. **Check the profile circle** in the hero section
 3. **Verify it loads properly** on mobile devices
 4. **Test the hover effect** (should scale slightly)

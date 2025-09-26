@@ -3,16 +3,16 @@
 ## 🌐 Live Portfolio URLs
 
 ### 🔗 Main Portfolio Website
-**https://gauravbhatia1211.github.io/cyberpunk-portfolio/**
+**https://gauravbhatia1211.github.io/portfolio/**
 
 ### 📁 GitHub Repository
-**https://github.com/Gauravbhatia1211/cyberpunk-portfolio**
+**https://github.com/Gauravbhatia1211/portfolio**
 
 ---
 
 ## 📊 Deployment Status
 
-✅ **Repository Created**: `Gauravbhatia1211/cyberpunk-portfolio`  
+**Repository Created**: `Gauravbhatia1211/portfolio`
 ✅ **Files Committed**: All portfolio files uploaded  
 ✅ **GitHub Pages Enabled**: Deploying from `main` branch  
 ✅ **Profile Links Updated**: All GitHub URLs point to your profile  
@@ -29,10 +29,10 @@
 - Hall of Fame mentions: Google (3x), Microsoft (4x), Adobe, Palo Alto
 - Bug bounty achievements on HackerOne and Immunefi
 
-### 🎨 **Cyberpunk Features**
+### 🎨 **Modern Features**
 - Matrix rain background animation
 - Terminal-style loading sequence
-- Glitch effects on name title
+- Interactive text effects on name title
 - Interactive particle system
 - Glassmorphism design elements
 - Advanced CSS animations
@@ -54,10 +54,10 @@
 ## 🛠️ Repository Structure
 
 ```
-cyberpunk-portfolio/
+portfolio/
 ├── index.html          # Main portfolio webpage
 ├── styles.css          # Core styling and layout
-├── animations.css      # Advanced cyberpunk animations
+├── animations.css      # Advanced animations
 ├── script.js           # Core JavaScript functionality  
 ├── extras.js           # Easter eggs and special features
 ├── README.md           # Project documentation
@@ -72,7 +72,7 @@ cyberpunk-portfolio/
 ## 🚀 Next Steps
 
 ### 1. **Verify Deployment** (Wait 2-3 minutes)
-Visit: https://gauravbhatia1211.github.io/cyberpunk-portfolio/
+Visit: https://gauravbhatia1211.github.io/portfolio/
 
 ### 2. **Test All Features**
 - ✅ Loading animation works
@@ -84,7 +84,7 @@ Visit: https://gauravbhatia1211.github.io/cyberpunk-portfolio/
 ### 3. **Share Your Portfolio**
 - 📧 **Email Signature**: Add portfolio link
 - 💼 **LinkedIn**: Update your profile with portfolio URL
-- 🐦 **Social Media**: Share your cyberpunk portfolio
+- 🐦 **Social Media**: Share your portfolio
 - 📝 **Resume**: Include portfolio link
 - 🤝 **Job Applications**: Showcase your unique presence
 
@@ -104,7 +104,7 @@ GitHub Pages will automatically redeploy!
 ## 📈 Portfolio Impact
 
 ### **What Makes You Stand Out:**
-1. **🎨 Unique Design**: Cyberpunk theme unlike typical portfolios
+1. **🎨 Unique Design**: Modern theme unlike typical portfolios
 2. **🔒 Security Focus**: CVEs and vulnerability research prominently displayed  
 3. **🏢 Enterprise Experience**: Microsoft MSRC and Oracle backgrounds
 4. **🏆 Proven Results**: Multiple Hall of Fame mentions and bug bounties
@@ -125,8 +125,8 @@ GitHub Pages will automatically redeploy!
 
 | Platform | URL |
 |----------|-----|
-| 🌐 **Live Portfolio** | https://gauravbhatia1211.github.io/cyberpunk-portfolio/ |
-| 📁 **GitHub Repo** | https://github.com/Gauravbhatia1211/cyberpunk-portfolio |
+| 🌐 **Live Portfolio** | https://gauravbhatia1211.github.io/portfolio/ |
+| 📁 **GitHub Repo** | https://github.com/Gauravbhatia1211/portfolio |
 | 💼 **LinkedIn** | https://linkedin.com/in/gaurav-bhatia-bb290916a |
 | 📝 **Medium** | https://medium.com/@bhatiagaurav1211 |
 | 🐛 **HackerOne** | https://hackerone.com/gaurav-bhatia |
@@ -143,4 +143,4 @@ GitHub Pages will automatically redeploy!
 
 ---
 
-**🎉 Congratulations! Your cyberpunk portfolio is now live and ready to impress! 🚀**
+**🎉 Congratulations! Your portfolio is now live and ready to impress! 🚀**

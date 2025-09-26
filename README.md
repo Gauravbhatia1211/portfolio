@@ -1,11 +1,11 @@
-# 🔐 Gaurav Bhatia - Cyberpunk Portfolio
+# 🔐 Gaurav Bhatia - Portfolio
 
-A cutting-edge, cyberpunk-themed portfolio website for Gaurav Bhatia, Security Researcher at Microsoft MSRC. Features advanced animations, Matrix rain effects, terminal interfaces, and a unique hacker aesthetic.
+A professional portfolio website for Gaurav Bhatia, Security Researcher at Microsoft MSRC. Features modern animations, interactive effects, terminal interfaces, and professional presentation of security expertise.
 
 ## 🚀 Features
 
 ### ✨ Unique Design Elements
-- **Cyberpunk/Hacker Aesthetic**: Dark theme with neon accents and glitch effects
+- **Professional Dark Theme**: Modern design with neon accents and interactive effects
 - **Matrix Rain Background**: Animated falling code effect
 - **Terminal Interfaces**: Interactive command-line style sections
 - **Glassmorphism Cards**: Modern frosted glass effects
@@ -93,7 +93,7 @@ The portfolio features the detailed writeup of the **Google Cloud Community Staf
 ### What Makes This Portfolio Stand Out:
 1. **Terminal Loading Screen**: Realistic boot sequence
 2. **Interactive Matrix Rain**: Live canvas animation
-3. **Cyberpunk Color Scheme**: Neon green/blue with dark backgrounds
+3. **Professional Color Scheme**: Neon green/blue with dark backgrounds
 4. **Glitch Effects**: Text distortion animations
 5. **Security-Focused Content**: CVE showcase and vulnerability details
 6. **Professional Presentation**: Enterprise-grade design quality
