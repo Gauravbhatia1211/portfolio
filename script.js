@@ -199,6 +199,8 @@
   if (avatarImg) {
     // Try local profile image first, then GitHub avatar
     const localImageSources = [
+      './portfolioimage.jpeg',
+      './images/portfolioimage.jpeg',
       './images/profile.jpg',
       './images/profile.png',
       './images/profile.jpeg',
