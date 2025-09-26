@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Bhatia | Security Researcher & Bug Hunter</title>
+    <meta name="description" content="Cyber Security Researcher, Bug Hunter, CTF Player - Microsoft Security Response Centre (MSRC)">
+    <meta name="keywords" content="cybersecurity, bug bounty, penetration testing, security researcher, CTF, vulnerability assessment">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fira+Code:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="terminal-loader">
+                <div class="loading-text">
+                    <span class="typing-text"></span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-brackets">[</span>
+                <span class="logo-text">GAURAV</span>
+                <span class="logo-brackets">]</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+                <li><a href="#blogs" class="nav-link" data-text="Blogs">Blogs</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="glitch-wrapper">
+                        <h1 class="hero-title glitch" data-text="GAURAV BHATIA">GAURAV BHATIA</h1>
+                    </div>
+                    <div class="terminal-container">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <span class="terminal-title">security_researcher.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <p class="terminal-line">
+                                    <span class="prompt">root@microsoft:~$</span>
+                                    <span class="command typing-animation"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="hero-subtitle">
+                        <span class="highlight">Security Researcher</span> @ 
+                        <span class="company">Microsoft MSRC</span> | 
+                        <span class="role">Bug Hunter</span> | 
+                        <span class="role">CTF Player</span>
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">Vulnerabilities Found</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="7">0</span>
+                            <span class="stat-label">CVEs Published</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Hall of Fame</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-terminal"></i>
+                            Hire Me
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-code"></i>
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <div class="card-controls">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="profile-avatar">
+                            <div class="avatar-glow"></div>
+                            <img src="https://avatars.githubusercontent.com/u/your-github-username?v=4" alt="Gaurav Bhatia" class="avatar-img">
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>SECURITY RESEARCHER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">01.</span>
+                        About Me
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="text-container">
+                            <p class="about-intro">
+                                Cyber Security Researcher with <span class="highlight">3+ years</span> of hands-on experience in VAPT, bug validation, and security automation. Currently working as a Security Researcher at <span class="company-highlight">Microsoft</span>, focusing on bug triage, security research, and process automation.
+                            </p>
+                            <div class="achievements-grid">
+                                <div class="achievement-item">
+                                    <i class="fas fa-bug"></i>
+                                    <h4>Bug Hunter</h4>
+                                    <p>Multiple Hall of Fame mentions from Google, Microsoft, Palo Alto, Adobe</p>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <h4>CTF Winner</h4>
+                                    <p>Winner of Sainya Ranakshetram (Indian Army) Hackathon</p>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <h4>CVE Author</h4>
+                                    <p>Multiple CVEs published for critical vulnerabilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <div class="editor-controls">
+                                    <span class="control red"></span>
+                                    <span class="control yellow"></span>
+                                    <span class="control green"></span>
+                                </div>
+                                <span class="file-name">security_profile.py</span>
+                            </div>
+                            <div class="code-content">
+                                <pre><code class="code-animation">
+<span class="keyword">class</span> <span class="class-name">SecurityResearcher</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.<span class="property">name</span> = <span class="string">"Gaurav Bhatia"</span>
+        self.<span class="property">role</span> = <span class="string">"Security Researcher"</span>
+        self.<span class="property">company</span> = <span class="string">"Microsoft MSRC"</span>
+        self.<span class="property">experience</span> = <span class="string">"3+ years"</span>
+        self.<span class="property">specialties</span> = [
+            <span class="string">"VAPT"</span>,
+            <span class="string">"Bug Bounty"</span>,
+            <span class="string">"Security Automation"</span>,
+            <span class="string">"CTF Competitions"</span>
+        ]
+    
+    <span class="keyword">def</span> <span class="function">hunt_bugs</span>(self):
+        <span class="keyword">return</span> <span class="string">"Finding vulnerabilities daily"</span>
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">02.</span>
+                        Experience
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item" data-date="July 2025 - Present">
+                        <div class="timeline-content">
+                            <div class="company-logo">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <h3>Security Researcher</h3>
+                            <h4>Microsoft Security Response Centre (MSRC)</h4>
+                            <ul class="responsibilities">
+                                <li>Triaged and validated security bug reports, collaborating with product teams</li>
+                                <li>Conducted in-depth security research to identify potential threats</li>
+                                <li>Developed automation scripts to optimize bug triage workflow</li>
+                                <li>Improved internal workflows reducing turnaround time</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Security Research</span>
+                                <span class="tech-tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-date="June 2024 - July 2025">
+                        <div class="timeline-content">
+                            <div class="company-logo">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Associate Application Developer</h3>
+                            <h4>Oracle Financial Software Services</h4>
+                            <ul class="responsibilities">
+                                <li>Conducted security assessments on internal banking applications</li>
+                                <li>Validated and triaged client-reported bugs</li>
+                                <li>Automated security scanning workflows using Jenkins and CloudLab</li>
+                                <li>Provided actionable mitigation strategies to development teams</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Jenkins</span>
+                                <span class="tech-tag">Security Testing</span>
+                                <span class="tech-tag">Banking Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-date="Dec 2021 - Jan 2022">
+                        <div class="timeline-content">
+                            <div class="company-logo">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Security Analyst</h3>
+                            <h4>99ideas Infotech Services</h4>
+                            <ul class="responsibilities">
+                                <li>Performed web application penetration testing</li>
+                                <li>Prepared detailed POCs and vulnerability reports</li>
+                                <li>Collaborated with development team for mitigation strategies</li>
+                                <li>Created comprehensive security documentation</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Penetration Testing</span>
+                                <span class="tech-tag">Web Security</span>
+                                <span class="tech-tag">Vulnerability Assessment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">03.</span>
+                        Skills & Tools
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-content">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i>
+                            Programming Languages
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="devicon-python-plain"></i>
+                                </div>
+                                <span>Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <span>Shell Scripting</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="devicon-javascript-plain"></i>
+                                </div>
+                                <span>JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-tools"></i>
+                            Security Tools
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <span>Burp Suite</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-skull-crossbones"></i>
+                                </div>
+                                <span>Metasploit</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <span>Wireshark</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <span>MobSF & Frida</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="78"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-shield-alt"></i>
+                            Security Expertise
+                        </h3>
+                        <div class="expertise-tags">
+                            <span class="expertise-tag">Web Application Security</span>
+                            <span class="expertise-tag">Mobile Security</span>
+                            <span class="expertise-tag">API Security</span>
+                            <span class="expertise-tag">Cloud Security</span>
+                            <span class="expertise-tag">Automotive Security</span>
+                            <span class="expertise-tag">OWASP</span>
+                            <span class="expertise-tag">NIST</span>
+                            <span class="expertise-tag">ASVS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">04.</span>
+                        Featured Projects
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-type">Security Tool</div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/vulneralysis" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Vulneralysis</h3>
+                        <p class="project-description">
+                            A comprehensive automation suite combining multiple security tools for vulnerability assessment. Streamlines the entire VAPT process with intelligent reporting and efficient workflows.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Security Automation</span>
+                            <span class="tech-tag">VAPT</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-type">Research Project</div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/python-pickle-security" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Python Pickle Security</h3>
+                        <p class="project-description">
+                            Demonstrates secure and insecure implementations of Python Pickle, showcasing RCE vulnerabilities and proper mitigation techniques for developers.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Security Research</span>
+                            <span class="tech-tag">RCE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-type">Steganography Tool</div>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/imagestegano" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">ImageStegano</h3>
+                        <p class="project-description">
+                            Advanced image steganography tool for encrypting and decrypting sensitive data within images. Features robust encryption algorithms and user-friendly interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Cryptography</span>
+                            <span class="tech-tag">Steganography</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CVE Section -->
+        <section id="cve" class="cve-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">05.</span>
+                        Published CVEs
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="cve-grid">
+                    <div class="cve-card">
+                        <div class="cve-header">
+                            <h3 class="cve-id">CVE-2024-6577</h3>
+                            <span class="severity high">HIGH</span>
+                        </div>
+                        <h4 class="cve-title">PyTorch S3 Bucket Exposure</h4>
+                        <p class="cve-description">
+                            Identified insecure reference to an unclaimed S3 bucket in a script, potentially exposing data or allowing unauthorized access.
+                        </p>
+                        <div class="cve-impact">
+                            <span class="impact-tag">Data Exposure</span>
+                            <span class="impact-tag">Unauthorized Access</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cve-card">
+                        <div class="cve-header">
+                            <h3 class="cve-id">CVE-2024-1682</h3>
+                            <span class="severity medium">MEDIUM</span>
+                        </div>
+                        <h4 class="cve-title">Python Foundation S3 Takeover</h4>
+                        <p class="cve-description">
+                            Discovered use of an externally claimed S3 bucket in documentation, risking data leakage or malicious hosting.
+                        </p>
+                        <div class="cve-impact">
+                            <span class="impact-tag">Data Leakage</span>
+                            <span class="impact-tag">Supply Chain</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cve-card">
+                        <div class="cve-header">
+                            <h3 class="cve-id">CVE-2023-6017</h3>
+                            <span class="severity high">HIGH</span>
+                        </div>
+                        <h4 class="cve-title">H2O.ai S3 Bucket Takeover</h4>
+                        <p class="cve-description">
+                            Reported takeover risk due to reference to a non-existent S3 bucket, enabling potential abuse or phishing attacks.
+                        </p>
+                        <div class="cve-impact">
+                            <span class="impact-tag">Takeover Risk</span>
+                            <span class="impact-tag">Phishing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section id="blogs" class="blogs">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">06.</span>
+                        Latest Writeups
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="blogs-content">
+                    <div class="featured-blog">
+                        <div class="blog-card featured">
+                            <div class="blog-header">
+                                <div class="blog-meta">
+                                    <span class="blog-platform">Medium</span>
+                                    <span class="blog-date">Jul 15, 2022</span>
+                                </div>
+                                <div class="blog-category">Bug Bounty</div>
+                            </div>
+                            <h3 class="blog-title">Ability to Login as Google Staff in Google Cloud Community</h3>
+                            <p class="blog-excerpt">
+                                Discovered a critical vulnerability that allowed unauthorized access to Google staff privileges in Google Cloud Community platform. The bug bypassed email verification and granted internal staff permissions.
+                            </p>
+                            <div class="blog-content">
+                                <h4>Summary:</h4>
+                                <p>While using Google Cloud Community, I discovered that there was a feature of creating an account which we usually don't see in any other Google domains. After creating a post, I noticed there was no email verification process.</p>
+                                
+                                <h4>Steps to Reproduce:</h4>
+                                <ol>
+                                    <li>Go to Google Cloud Community registration page</li>
+                                    <li>Create an account with mail id: test@google.com</li>
+                                    <li>Account successfully created without email verification</li>
+                                    <li>Got privilege of replying to any member as internal Google staff</li>
+                                </ol>
+                                
+                                <h4>Impact:</h4>
+                                <p>An attacker can login as internal Google staff and spread malicious URLs, files, etc. Also can spread rumors among communities being an internal Google staff which creates negative impression.</p>
+                                
+                                <div class="timeline-box">
+                                    <h4>Timeline:</h4>
+                                    <ul>
+                                        <li>2022-02-24: Initial Report to Google VRP</li>
+                                        <li>2022-02-24: Issue Triaged</li>
+                                        <li>2022-03-09: Internal bug report filed</li>
+                                        <li>2022-03-25: VRP issued reward ($100)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog-tags">
+                                <span class="tag">Google VRP</span>
+                                <span class="tag">Authentication Bypass</span>
+                                <span class="tag">Privilege Escalation</span>
+                                <span class="tag">$100 Bounty</span>
+                            </div>
+                            <div class="blog-actions">
+                                <a href="https://medium.com/@bhatiagaurav1211/ability-to-login-as-google-staff-in-google-cloud-community-57c45809de05" target="_blank" class="read-more-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Read Full Article
+                                </a>
+                                <button class="share-btn">
+                                    <i class="fas fa-share-alt"></i>
+                                    Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-list">
+                        <h3>More Writeups Coming Soon...</h3>
+                        <p class="blog-note">Follow me on Medium for latest security research and bug bounty writeups!</p>
+                        <a href="https://medium.com/@bhatiagaurav1211" target="_blank" class="medium-follow-btn">
+                            <i class="fab fa-medium"></i>
+                            Follow on Medium
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-number">07.</span>
+                        Get In Touch
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-text">
+                            <h3>Let's Connect!</h3>
+                            <p>I'm always open to discussing new opportunities, collaborations, or just talking about cybersecurity. Whether you're looking for a security researcher, need a penetration test, or want to discuss the latest vulnerabilities, feel free to reach out!</p>
+                        </div>
+                        <div class="contact-links">
+                            <a href="mailto:bhatiagaurav1211@gmail.com" class="contact-link">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-type">Email</span>
+                                    <span class="contact-value">bhatiagaurav1211@gmail.com</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://linkedin.com/in/gaurav-bhatia-bb290916a" target="_blank" class="contact-link">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-type">LinkedIn</span>
+                                    <span class="contact-value">Connect with me</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-type">GitHub</span>
+                                    <span class="contact-value">Check my code</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://hackerone.com/gaurav-bhatia" target="_blank" class="contact-link">
+                                <div class="contact-icon">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-type">HackerOne</span>
+                                    <span class="contact-value">Bug hunting profile</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-contact">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <span class="terminal-title">contact.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">visitor@portfolio:~$</span>
+                                    <span class="command">cat contact_info.txt</span>
+                                </div>
+                                <div class="terminal-output">
+                                    <div class="output-line">Name: Gaurav Bhatia</div>
+                                    <div class="output-line">Role: Security Researcher @ Microsoft MSRC</div>
+                                    <div class="output-line">Location: Mumbai, India</div>
+                                    <div class="output-line">Status: Available for opportunities</div>
+                                    <div class="output-line">Specialties: VAPT | Bug Bounty | Security Research</div>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="prompt">visitor@portfolio:~$</span>
+                                    <span class="cursor-blink">█</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Gaurav Bhatia. Built with passion for cybersecurity.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/yourusername" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/gaurav-bhatia-bb290916a" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://medium.com/@bhatiagaurav1211" target="_blank">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                    <a href="https://hackerone.com/gaurav-bhatia" target="_blank">
+                        <i class="fas fa-bug"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="extras.js"></script>
+</body>
+</html>

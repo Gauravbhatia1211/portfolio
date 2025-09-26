@@ -1,0 +1,395 @@
+/* Advanced Cyberpunk Animations */
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  color: var(--text);
+  font-weight: 900;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.glitch::before {
+  animation: glitch-anim-1 0.5s infinite linear alternate-reverse;
+  color: var(--primary-2);
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-anim-2 0.6s infinite linear alternate-reverse;
+  color: var(--accent);
+  z-index: -2;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%); transform: translate(2px, 0); }
+  10% { clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%); transform: translate(-2px, 0); }
+  20% { clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%); transform: translate(2px, 0); }
+  30% { clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%); transform: translate(-2px, 0); }
+  40% { clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%); transform: translate(2px, 0); }
+  50% { clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%); transform: translate(-2px, 0); }
+  60% { clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%); transform: translate(2px, 0); }
+  70% { clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%); transform: translate(-2px, 0); }
+  80% { clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%); transform: translate(2px, 0); }
+  90% { clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%); transform: translate(-2px, 0); }
+  100% { clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%); transform: translate(2px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%); transform: translate(-2px, 0); }
+  15% { clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%); transform: translate(2px, 0); }
+  22% { clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%); transform: translate(-2px, 0); }
+  31% { clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%); transform: translate(2px, 0); }
+  45% { clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%); transform: translate(-2px, 0); }
+  51% { clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%); transform: translate(2px, 0); }
+  63% { clip-path: polygon(0 60%, 100% 60%, 100% 68%, 0 68%); transform: translate(-2px, 0); }
+  76% { clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%); transform: translate(2px, 0); }
+  81% { clip-path: polygon(0 65%, 100% 65%, 100% 75%, 0 75%); transform: translate(-2px, 0); }
+  94% { clip-path: polygon(0 12%, 100% 12%, 100% 13%, 0 13%); transform: translate(2px, 0); }
+  100% { clip-path: polygon(0 63%, 100% 63%, 100% 80%, 0 80%); transform: translate(-2px, 0); }
+}
+
+/* Typing Animation */
+.typing-animation {
+  border-right: 2px solid var(--primary);
+  animation: typing 4s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0%, 20% { width: 0; }
+  25%, 45% { width: 18ch; }
+  50%, 70% { width: 0; }
+  75%, 95% { width: 22ch; }
+  100% { width: 0; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary); }
+}
+
+/* Scroll Indicator Animation */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  animation: bounce 2s infinite;
+}
+
+.mouse {
+  width: 20px;
+  height: 32px;
+  border: 2px solid var(--muted);
+  border-radius: 10px;
+  position: relative;
+  opacity: 0.7;
+}
+
+.wheel {
+  width: 2px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: wheel-scroll 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@keyframes wheel-scroll {
+  0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(14px); }
+}
+
+/* Floating Animation */
+.hero-visual .profile-card {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Glow Pulse */
+.avatar-glow {
+  animation: glow-pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  from { transform: scale(0.9); opacity: 0.3; }
+  to { transform: scale(1.1); opacity: 0.6; }
+}
+
+/* Matrix Rain Effect - Enhanced */
+.matrix-char {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  font-family: 'Fira Code', monospace;
+}
+
+/* Skill Bar Animation */
+.skill-bar {
+  animation: skill-bar-fill 2s ease-out forwards;
+  transform-origin: left;
+}
+
+@keyframes skill-bar-fill {
+  from { width: 0; }
+  to { width: var(--skill-level, 0%); }
+}
+
+/* Card Hover Effects */
+.project-card, .cve-card, .blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.cve-card:hover,
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 230, 168, 0.15);
+}
+
+/* Terminal Cursor Blink */
+.cursor-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* Code Animation */
+.code-animation {
+  opacity: 0;
+  animation: code-reveal 3s ease-out forwards;
+}
+
+@keyframes code-reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Entrance Animations */
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.section-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Particle Effects */
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: particle-float 6s linear infinite;
+}
+
+@keyframes particle-float {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Cyberpunk Grid Lines */
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 230, 168, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 168, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+/* Holographic Effect */
+.holographic {
+  background: linear-gradient(45deg, 
+    rgba(0, 230, 168, 0.1) 0%, 
+    rgba(0, 212, 255, 0.1) 25%, 
+    rgba(255, 45, 107, 0.1) 50%, 
+    rgba(0, 212, 255, 0.1) 75%, 
+    rgba(0, 230, 168, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: holographic-shift 8s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Neon Border Effect */
+.neon-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box,
+              linear-gradient(45deg, var(--primary), var(--primary-2), var(--accent)) border-box;
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from { box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary); }
+  to { box-shadow: 0 0 10px var(--primary-2), 0 0 20px var(--primary-2), 0 0 30px var(--primary-2); }
+}
+
+/* Scanline Effect */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  animation: scanlines 0.1s linear infinite;
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(2px); }
+}
+
+/* Timeline Glow */
+.timeline::before {
+  animation: timeline-glow 3s ease-in-out infinite;
+}
+
+@keyframes timeline-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(0, 230, 168, 0.8); }
+}
+
+/* Cyber Text Effect */
+.cyber-text {
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cyber-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes cyber-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Loading Dots */
+.loading-dots::after {
+  content: '';
+  display: inline-block;
+  animation: loading-dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
+/* Terminal Boot Sequence */
+.terminal-boot {
+  animation: terminal-boot-sequence 3s ease-out forwards;
+}
+
+@keyframes terminal-boot-sequence {
+  0% { opacity: 0; transform: scale(0.8); }
+  30% { opacity: 0.5; }
+  60% { opacity: 0.8; transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Security Badge Pulse */
+.security-badge {
+  animation: security-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes security-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 230, 168, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 230, 168, 0); }
+}
+
+/* Blur and Focus Animation */
+.blur-focus {
+  animation: blur-focus 4s ease-in-out infinite;
+}
+
+@keyframes blur-focus {
+  0%, 100% { filter: blur(0px); }
+  50% { filter: blur(1px); }
+}
+
+/* Responsive Animation Adjustments */
+@media (max-width: 768px) {
+  .glitch::before,
+  .glitch::after {
+    animation-duration: 1s;
+  }
+  
+  .profile-card {
+    animation-duration: 8s;
+  }
+  
+  .scroll-indicator {
+    animation-duration: 3s;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .scroll-indicator,
+  .profile-card,
+  .avatar-glow {
+    animation: none;
+  }
+}
