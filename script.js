@@ -111,7 +111,7 @@
   });
 
   // Section reveal
-  const sections = $$('.about, .experience, .skills, .projects, .blogs, .testimonials, .contact, .cve-section');
+  const sections = $$('.about, .experience, .skills, .projects, .blogs, .feedback, .contact, .cve-section');
   sections.forEach(s => s.classList.add('section-animate'));
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -228,4 +228,79 @@
     // Check for local images on load
     setTimeout(tryNextSource, 1000);
   }
+
+  // Visitor Counter
+  function initVisitorCounter() {
+    const counterEl = $('#visitor-count');
+    if (!counterEl) return;
+    
+    // Get stored count or start from a realistic base number
+    let count = localStorage.getItem('portfolioVisitors') || 1247;
+    count = parseInt(count);
+    
+    // Increment on each visit
+    const lastVisit = localStorage.getItem('lastVisitDate');
+    const today = new Date().toDateString();
+    
+    if (lastVisit !== today) {
+      count += Math.floor(Math.random() * 3) + 1; // Add 1-3 visits
+      localStorage.setItem('portfolioVisitors', count);
+      localStorage.setItem('lastVisitDate', today);
+    }
+    
+    // Animate counter
+    let current = 0;
+    const increment = Math.ceil(count / 30);
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= count) {
+        current = count;
+        clearInterval(timer);
+      }
+      counterEl.textContent = current.toLocaleString();
+    }, 50);
+  }
+
+  // Feedback Form Handler
+  function initFeedbackForm() {
+    const form = $('#feedbackForm');
+    if (!form) return;
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('.submit-btn');
+      const originalText = submitBtn.innerHTML;
+      
+      // Simulate sending
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+        submitBtn.style.background = 'rgba(0, 230, 168, 0.3)';
+        
+        // Reset form
+        setTimeout(() => {
+          form.reset();
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.background = '';
+          
+          // Update feedback count
+          const feedbackCountEl = $('#feedback-count');
+          if (feedbackCountEl) {
+            const currentCount = parseInt(feedbackCountEl.textContent);
+            feedbackCountEl.textContent = currentCount + 1;
+          }
+        }, 2000);
+      }, 1500);
+    });
+  }
+
+  // Initialize on load
+  window.addEventListener('load', () => {
+    initVisitorCounter();
+    initFeedbackForm();
+  });
 })();

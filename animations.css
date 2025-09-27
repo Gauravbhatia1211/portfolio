@@ -166,16 +166,35 @@
 }
 
 /* Card Hover Effects */
-.project-card, .cve-card, .blog-card, .testimonial-card {
+.project-card, .cve-card, .blog-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover,
 .cve-card:hover,
-.blog-card:hover,
-.testimonial-card:hover {
+.blog-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 230, 168, 0.15);
+}
+
+/* Form Animations */
+.feedback-form {
+  animation: form-slide-up 0.6s ease-out;
+}
+
+@keyframes form-slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Visitor Counter Animation */
+.visitor-counter {
+  animation: counter-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes counter-glow {
+  from { box-shadow: 0 0 5px rgba(0, 230, 168, 0.2); }
+  to { box-shadow: 0 0 15px rgba(0, 230, 168, 0.4); }
 }
 
 /* Terminal Cursor Blink */
