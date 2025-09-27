@@ -111,7 +111,7 @@
   });
 
   // Section reveal
-  const sections = $$('.about, .experience, .skills, .projects, .blogs, .contact, .cve-section');
+  const sections = $$('.about, .experience, .skills, .projects, .blogs, .testimonials, .contact, .cve-section');
   sections.forEach(s => s.classList.add('section-animate'));
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

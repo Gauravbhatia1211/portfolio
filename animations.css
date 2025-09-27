@@ -166,13 +166,14 @@
 }
 
 /* Card Hover Effects */
-.project-card, .cve-card, .blog-card {
+.project-card, .cve-card, .blog-card, .testimonial-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover,
 .cve-card:hover,
-.blog-card:hover {
+.blog-card:hover,
+.testimonial-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 230, 168, 0.15);
 }
