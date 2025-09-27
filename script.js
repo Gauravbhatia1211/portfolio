@@ -111,7 +111,7 @@
   });
 
   // Section reveal
-  const sections = $$('.about, .experience, .skills, .projects, .blogs, .feedback, .contact, .cve-section');
+  const sections = $$('.about, .experience, .skills, .projects, .blogs, .contact, .cve-section');
   sections.forEach(s => s.classList.add('section-animate'));
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -261,46 +261,8 @@
     }, 50);
   }
 
-  // Feedback Form Handler
-  function initFeedbackForm() {
-    const form = $('#feedbackForm');
-    if (!form) return;
-    
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const submitBtn = form.querySelector('.submit-btn');
-      const originalText = submitBtn.innerHTML;
-      
-      // Simulate sending
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      submitBtn.disabled = true;
-      
-      setTimeout(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-        submitBtn.style.background = 'rgba(0, 230, 168, 0.3)';
-        
-        // Reset form
-        setTimeout(() => {
-          form.reset();
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          submitBtn.style.background = '';
-          
-          // Update feedback count
-          const feedbackCountEl = $('#feedback-count');
-          if (feedbackCountEl) {
-            const currentCount = parseInt(feedbackCountEl.textContent);
-            feedbackCountEl.textContent = currentCount + 1;
-          }
-        }, 2000);
-      }, 1500);
-    });
-  }
-
   // Initialize on load
   window.addEventListener('load', () => {
     initVisitorCounter();
-    initFeedbackForm();
   });
 })();
